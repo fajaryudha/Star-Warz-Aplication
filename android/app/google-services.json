@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88121894053",
+    "firebase_url": "https://star-warz-aplication.firebaseio.com",
+    "project_id": "star-warz-aplication",
+    "storage_bucket": "star-warz-aplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88121894053:android:e2c8c08ce3ec680f64994c",
+        "android_client_info": {
+          "package_name": "com.example.star_wars_aplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88121894053-7udh9kld4c6autq2ai5qbq981i63nquc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWZ41SPTQl-_tHBHLv43Owqfi8cAajDg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88121894053-7udh9kld4c6autq2ai5qbq981i63nquc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
