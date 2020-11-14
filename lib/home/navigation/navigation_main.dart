@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'navigation_bloc.dart';
+import 'package:star_wars_aplication/beranda/beranda.dart';
 
 class BottomNavBarApp extends StatefulWidget {
   createState() => _BottomNavBarAppState();
@@ -31,12 +32,12 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
         initialData: _bottomNavBarBloc.defaultItem,
         builder: (BuildContext context, AsyncSnapshot<NavBarItem> snapshot) {
           switch (snapshot.data) {
-            case NavBarItem.HOME:
-              return _homeArea();
-            case NavBarItem.ALERT:
-              return _alertArea();
-            case NavBarItem.SETTINGS:
-              return _settingsArea();
+            case NavBarItem.BERANDA:
+              return _beranda();
+            case NavBarItem.FAVORITE:
+              return _favorite();
+            case NavBarItem.PROFILE:
+              return _profile();
           }
         },
       ),
@@ -50,16 +51,16 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
             onTap: _bottomNavBarBloc.pickItem,
             items: [
               BottomNavigationBarItem(
-                title: Text('Home'),
+                title: Text('Beranda'),
                 icon: Icon(Icons.home),
               ),
               BottomNavigationBarItem(
-                title: Text('Notifications'),
-                icon: Icon(Icons.notifications),
+                title: Text('Favorite'),
+                icon: Icon(Icons.favorite),
               ),
               BottomNavigationBarItem(
-                title: Text('Settings'),
-                icon: Icon(Icons.settings),
+                title: Text('Profile'),
+                icon: Icon(Icons.people_alt),
               ),
             ],
           );
@@ -68,20 +69,11 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
     );
   }
 
-  Widget _homeArea() {
-    return Center(
-      child: Text(
-        'Home Screen',
-        style: TextStyle(
-          fontWeight: FontWeight.w700,
-          color: Colors.green,
-          fontSize: 25.0,
-        ),
-      ),
-    );
+  Widget _beranda() {
+    return MaterialApp(home: BerandaPage());
   }
 
-  Widget _alertArea() {
+  Widget _favorite() {
     return Center(
       child: Text(
         'Notifications Screen',
@@ -94,7 +86,7 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
     );
   }
 
-  Widget _settingsArea() {
+  Widget _profile() {
     return Center(
       child: Text(
         'Settings Screen',

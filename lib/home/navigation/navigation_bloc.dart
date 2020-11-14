@@ -1,25 +1,25 @@
 import 'dart:async';
 
-enum NavBarItem { HOME, ALERT, SETTINGS }
+enum NavBarItem { BERANDA, FAVORITE, PROFILE }
 
 class BottomNavBarBloc {
   final StreamController<NavBarItem> _navBarController =
       StreamController<NavBarItem>.broadcast();
 
-  NavBarItem defaultItem = NavBarItem.HOME;
+  NavBarItem defaultItem = NavBarItem.BERANDA;
 
   Stream<NavBarItem> get itemStream => _navBarController.stream;
 
   void pickItem(int i) {
     switch (i) {
       case 0:
-        _navBarController.sink.add(NavBarItem.HOME);
+        _navBarController.sink.add(NavBarItem.BERANDA);
         break;
       case 1:
-        _navBarController.sink.add(NavBarItem.ALERT);
+        _navBarController.sink.add(NavBarItem.FAVORITE);
         break;
       case 2:
-        _navBarController.sink.add(NavBarItem.SETTINGS);
+        _navBarController.sink.add(NavBarItem.PROFILE);
         break;
     }
   }

@@ -1,0 +1,1 @@
+export 'view/beranda_page.dart';
